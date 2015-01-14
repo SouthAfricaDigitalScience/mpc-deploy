@@ -1,4 +1,7 @@
 #!/bin/bash
+module add ci
+module add gmp
+module add mpfr
 make check
 make install # this will install to /apprepo
 make install DESTDIR=$WORKSPACE/build # this will create a redistributable tarball
