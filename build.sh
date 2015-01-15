@@ -2,8 +2,8 @@
 SOURCE_FILE=$NAME-$VERSION.tar.gz
 
 module load ci
-module add mpfr
 module add gmp
+module add mpfr
 
 echo "REPO_DIR is "
 echo $REPO_DIR
