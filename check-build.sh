@@ -27,6 +27,7 @@ module load mpfr/$MPFR_VERSION
 setenv MPC_VERSION $VERSION
 setenv MPC_DIR /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 prepend-path LD_LIBRARY_PATH $::env(MPC_DIR)/lib
+prepend-path GCC_INCLUDE_DIR $::env(MPC_DIR)/lib
 MODULE_FILE
 ) > modules/$VERSION
 mkdir -p $LIBRARIES_MODULES/$NAME
