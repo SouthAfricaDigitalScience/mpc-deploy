@@ -4,6 +4,8 @@ SOURCE_FILE=$NAME-$VERSION.tar.gz
 module load ci
 module add gmp
 module add mpfr
+module list
+
 
 echo "REPO_DIR is "
 echo $REPO_DIR
@@ -13,6 +15,8 @@ echo "WORKSPACE is "
 echo $WORKSPACE
 echo "SOFT_DIR is"
 echo $SOFT_DIR
+
+echo $LD_LIBRARY_PATH
 
 mkdir -p $WORKSPACE
 mkdir -p $SRC_DIR
