@@ -22,8 +22,8 @@ puts stderr " This module does nothing but alert the user"
 puts stderr " that the [module-info name] module is not available"
 }
 module-whatis "$NAME $VERSION."
-module load ncurses/$ncurses_VERSION
-module load mpfr/$MPFR_VERSION
+module load ncurses
+module load mpfr
 setenv MPC_VERSION $VERSION
 setenv MPC_DIR /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 prepend-path LD_LIBRARY_PATH $::env(MPC_DIR)/lib
