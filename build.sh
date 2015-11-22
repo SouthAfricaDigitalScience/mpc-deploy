@@ -3,7 +3,9 @@
 SOURCE_FILE=$NAME-$VERSION.tar.gz
 
 module load ci
+module add gmp
 module add mpfr
+module add ncurses
 module list
 
 
@@ -35,5 +37,5 @@ else
 fi
 cd $WORKSPACE/$NAME-$VERSION
 # We could probably loop through the dependencies here
-./configure --prefix $SOFT_DIR --with-ncurses=$ncurses_DIR --with-mpfr=$MPFR_DIR
+./configure --prefix $SOFT_DIR --with-ncurses=$ncurses_DIR --with-mpfr=$MPFR_DIR  --with-gmp=${GMP_DIR}
 make -j 8
