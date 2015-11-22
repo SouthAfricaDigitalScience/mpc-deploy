@@ -1,6 +1,6 @@
 #!/bin/bash
+. /etc/profile.d/modules.sh
 module add ci
-module add gmp
 module add mpfr
 cd $WORKSPACE/$NAME-$VERSION
 
@@ -22,7 +22,7 @@ puts stderr " This module does nothing but alert the user"
 puts stderr " that the [module-info name] module is not available"
 }
 module-whatis "$NAME $VERSION."
-module load gmp/$GMP_VERSION
+module load ncurses/$ncurses_VERSION
 module load mpfr/$MPFR_VERSION
 setenv MPC_VERSION $VERSION
 setenv MPC_DIR /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
