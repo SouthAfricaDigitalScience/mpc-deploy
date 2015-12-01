@@ -10,7 +10,6 @@ make install # this will install to /apprepo
 make install DESTDIR=${WORKSPACE}/build # this will create a redistributable tarball
 mkdir -p ${REPO_DIR}
 rm -rf ${REPO_DIR}/*
-tar -cvzf ${REPO_DIR}/build.tar.gz -C ${WORKSPACE}/build apprepo
 mkdir -p modules
 (
 cat <<MODULE_FILE
