@@ -10,7 +10,7 @@ module add ncurses
 echo ${SOFT_DIR}
 cd ${WORKSPACE}/${NAME}-${VERSION}
 echo "All tests have passed, will now build into ${SOFT_DIR}"
-./configure  ./configure --prefix ${SOFT_DIR} --with-ncurses=${ncurses_DIR} --with-mpfr=${MPFR_DIR}  --with-gmp=${GMP_DIR}
+./configure --prefix ${SOFT_DIR}  --with-mpfr=${MPFR_DIR}  --with-gmp=${GMP_DIR}
 make install
 mkdir -p ${LIBRARIES_MODULES}/${NAME}
 

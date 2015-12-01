@@ -37,5 +37,5 @@ else
 fi
 cd ${WORKSPACE}/${NAME}-${VERSION}
 # We could probably loop through the dependencies here
-./configure --prefix ${SOFT_DIR} --with-ncurses=${ncurses_DIR} --with-mpfr=${MPFR_DIR}  --with-gmp=${GMP_DIR}
+./configure --prefix ${SOFT_DIR} --with-mpfr=${MPFR_DIR}  --with-gmp=${GMP_DIR}
 make -j 8
