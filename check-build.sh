@@ -1,15 +1,14 @@
 #!/bin/bash
 . /etc/profile.d/modules.sh
 module add ci
+module add gmp
 module add mpfr
-cd ${WORKSPACE}/${NAME}-${VERSION}
+module add ncurses
+cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 
 make check
 
 make install # this will install to /apprepo
-make install DESTDIR=${WORKSPACE}/build # this will create a redistributable tarball
-mkdir -p ${REPO_DIR}
-rm -rf ${REPO_DIR}/*
 mkdir -p modules
 (
 cat <<MODULE_FILE
@@ -21,7 +20,6 @@ puts stderr " This module does nothing but alert the user"
 puts stderr " that the [module-info name] module is not available"
 }
 module-whatis "$NAME $VERSION."
-module load mpfr
 setenv MPC_VERSION $VERSION
 setenv MPC_DIR /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 prepend-path LD_LIBRARY_PATH $::env(MPC_DIR)/lib
