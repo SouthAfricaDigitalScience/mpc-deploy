@@ -21,7 +21,7 @@ puts stderr " that the [module-info name] module is not available"
 }
 module-whatis "$NAME $VERSION."
 setenv MPC_VERSION $VERSION
-setenv MPC_DIR /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
+setenv MPC_DIR $::env(SOFT_DIR)
 prepend-path LD_LIBRARY_PATH $::env(MPC_DIR)/lib
 prepend-path GCC_INCLUDE_DIR $::env(MPC_DIR)/lib
 MODULE_FILE
