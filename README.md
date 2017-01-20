@@ -31,3 +31,7 @@ The project is built with the following configuration :
 ```
 
 # Citing
+
+Cite as
+
+Bruce Becker. (2017). SouthAfricaDigitalScience/mpc-deploy: CODE-RADE Foundation Release 3 : MPC [Data set]. Zenodo. http://doi.org/10.5281/zenodo.254219 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.254219.svg)](https://doi.org/10.5281/zenodo.254219)
