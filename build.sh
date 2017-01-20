@@ -5,7 +5,6 @@ SOURCE_FILE=${NAME}-${VERSION}.tar.gz
 module add ci
 module add gmp
 module add mpfr
-module add ncurses
 module list
 
 
