@@ -36,3 +36,9 @@ prepend-path LD_LIBRARY_PATH   $::env(MPC_DIR)/lib
 prepend-path GCC_INCLUDE_DIR   $::env(MPC_DIR)/include
 MODULE_FILE
 ) > ${LIBRARIES_MODULES}/${NAME}/${VERSION}
+
+#  Use the module
+
+module avail ${NAME}
+
+module add ${NAME}/${VERSION}
