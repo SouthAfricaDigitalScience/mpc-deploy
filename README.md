@@ -9,8 +9,7 @@ Build, test and deployment scripts for [GNU multiprecision library](http://www.m
 This project has the following dependencies :
 
   * [mpfr](http://www.mpfr.org/) - [![Build Status](https://ci.sagrid.ac.za/buildStatus/icon?job=mpfr-deploy)](https://ci.sagrid.ac.za/job/mpfr-deploy)
-  * [ncurses](https://www.gnu.org/software/ncurses/) -
-  * [gmp](https://gmplib.org/) -
+  * [gmp](https://gmplib.org/) - [![Build Status](https://ci.sagrid.ac.za/buildStatus/icon?job=gmp-deploy)](https://ci.sagrid.ac.za/job/gmp-deploy)
 
 # Versions
 
