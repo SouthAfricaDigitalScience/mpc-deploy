@@ -19,7 +19,11 @@ echo ${SOFT_DIR}
 module add deploy
 # Now, dependencies
 module add gmp
-module add mpfr
+case  ${VERSION:2:1} in
+    0) module add mpfr/3.1.2 ;;
+    1) module add mpfr/4.0.1 ;;
+    *) echo "Sorry, you have a wierd MPC version : $VERSION" ;;
+esac
 module add ncurses
 echo ${SOFT_DIR}
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
@@ -28,7 +32,9 @@ rm -rf *
 ../configure \
 --prefix ${SOFT_DIR} \
 --with-mpfr=${MPFR_DIR} \
---with-gmp=${GMP_DIR}
+--with-gmp=${GMP_DIR} \
+--enable-shared \
+--enable-static
 make install
 mkdir -p ${LIBRARIES}/${NAME}
 
